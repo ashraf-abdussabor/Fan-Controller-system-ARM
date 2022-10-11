@@ -1,0 +1,31 @@
+17:16:55 **** Incremental Build of configuration Debug for project ashraf ****
+make all 
+Building file: ../project3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"project3.d" -MT"project3.o" -c -o "project3.o" "../project3.c"
+Finished building: ../project3.c
+ 
+Building target: ashraf.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ashraf.map -mmcu=atmega16 -o "ashraf.elf"  ./ADC.o ./dc_motor.o ./gpio.o ./lcd.o ./lm35_sensor.o ./project3.o ./pwm_timer0.o   
+Finished building target: ashraf.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ashraf.elf  >"ashraf.lss"
+Finished building: ashraf.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 ashraf.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9660 bytes (59.0% Full)
+(.text + .data + .bootloader)
+
+Data:        295 bytes (28.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
